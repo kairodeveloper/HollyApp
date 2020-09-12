@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="100dp"
+    android:layout_width="match_parent"
+    card_view:cardBackgroundColor="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/iv_review"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/ic_baseline_movie_filter_24"
+            android:contentDescription="@string/imagem_do_filme" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="16dp"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/tv_title_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="O Senhor dos Anéis"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_subtitle_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Por: Andrew Mathew"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_review"
+            android:layout_marginTop="20dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_favorite_border_24"
+            android:background="@color/black"
+            android:contentDescription="@string/botao_favorito" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

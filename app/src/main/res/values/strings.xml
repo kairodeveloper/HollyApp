@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HollyApp</string>
+    <string name="title_app">HollyApp</string>
+    <string name="title_welcome_main">As revisões mais recentes...</string>
+    <string name="imagem_do_filme">Imagem do filme</string>
+    <string name="botao_favorito">botao_ favorito</string>
+</resources>
