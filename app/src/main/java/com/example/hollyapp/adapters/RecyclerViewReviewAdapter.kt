@@ -30,7 +30,7 @@ open class RecyclerViewReviewAdapter (private var movies: ArrayList<ReviewMovie>
             val dayAndMonth = itemView.tv_day_month
             val year = itemView.tv_year
 
-            title.text = movie.title
+            title.text = if (movie.title==null) { "" } else { movie.title }
             subtitle.text = preview+movie.author
             dayAndMonth.text = dataComDiaMes(movie.publish_date?.time!!)
             year.text = dataSoAno(movie.publish_date?.time!!)
