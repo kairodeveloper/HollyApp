@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
+    android:background="@drawable/card_review_border"
     card_view:cardBackgroundColor="@color/black">
 
     <LinearLayout
@@ -34,7 +35,7 @@
                 android:id="@+id/tv_title_review"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="O Senhor dos Anéis"
+                android:text="O Senhor dos Anéis - O Retorno do Rei"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
