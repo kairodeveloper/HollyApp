@@ -1,7 +1,8 @@
 package com.example.hollyapp.adapters
 
-import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hollyapp.R
 import com.example.hollyapp.models.ReviewMovie
 import com.example.hollyapp.utils.dataComDiaMes
-import com.example.hollyapp.utils.dataSoAno
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_review.view.*
-import java.util.*
-import kotlin.collections.ArrayList
+import java.io.InputStream
+import java.net.URL
+
 
 open class RecyclerViewReviewAdapter (private var movies: ArrayList<ReviewMovie>,
                                  private val context: Context,
@@ -20,7 +22,6 @@ open class RecyclerViewReviewAdapter (private var movies: ArrayList<ReviewMovie>
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
-        @SuppressLint("SetTextI18n")
         fun bindView(movie: ReviewMovie, context: Context) {
             val preview = context.getString(R.string.by)
 
@@ -30,10 +31,17 @@ open class RecyclerViewReviewAdapter (private var movies: ArrayList<ReviewMovie>
             val dayAndMonth = itemView.tv_day_month
             val year = itemView.tv_year
 
-            title.text = if (movie.title==null) { "" } else { movie.title }
-            subtitle.text = preview+movie.author
+            val valueTitle = if (movie.title==null) { "" } else { movie.title }
+            val valueAuthor = if (movie.author==null) { "" } else { movie.author }
+
+            if (movie.url_pic!="") {
+                Picasso.with(context).load(movie.url_pic).into(image)
+            }
+
+            title.text = if (valueTitle?.length!! > 30) { valueTitle.substring(0, 28).plus("...") } else { valueTitle }
+            subtitle.text = preview.plus(" ").plus(if (valueAuthor?.length!! > 30) { valueAuthor.substring(0, 28).plus("...") } else { valueAuthor })
             dayAndMonth.text = dataComDiaMes(movie.publish_date?.time!!)
-            year.text = dataSoAno(movie.publish_date?.time!!)
+            year.text = movie.publish_date?.year.toString()
         }
     }
 
@@ -52,7 +60,7 @@ open class RecyclerViewReviewAdapter (private var movies: ArrayList<ReviewMovie>
         holder.bindView(movie, context)
 
         holder.itemView.setOnClickListener {
-            clickListener.onBtnClick(movie.mid)
+            clickListener.onBtnClick(movie)
         }
     }
 

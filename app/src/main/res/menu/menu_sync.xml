@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/icon_sync"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_refresh_24"
-        android:title="" />
+        android:id="@+id/icon_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="HollyApp"
+        android:titleCondensed="@string/title_app"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.widget.SearchView" />
 
 </menu>

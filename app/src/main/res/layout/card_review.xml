@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:layout_marginHorizontal="10dp">
 
         <ImageView
@@ -23,6 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="8"
+            android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingHorizontal="10dp"
             android:paddingVertical="16dp"
@@ -34,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="O Senhor dos Anéis"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -43,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:text="Por: Andrew Mathew"
                 android:textColor="@color/white"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
@@ -51,6 +53,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:gravity="center_vertical"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tv_day_month"
@@ -58,10 +61,9 @@
                 android:layout_height="wrap_content"
                 android:text="15/12"
                 android:layout_gravity="end"
-                android:layout_marginTop="18dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="24sp"/>
+                android:textSize="18sp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -74,7 +76,7 @@
                     android:text="de"
                     android:layout_gravity="end"
                     android:textColor="@color/white"
-                    android:textSize="14sp"/>
+                    android:textSize="12sp"/>
                 <TextView
                     android:id="@+id/tv_year"
                     android:layout_width="wrap_content"
@@ -83,7 +85,7 @@
                     android:layout_marginStart="6dp"
                     android:layout_gravity="end"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
                     android:layout_marginLeft="6dp" />
 

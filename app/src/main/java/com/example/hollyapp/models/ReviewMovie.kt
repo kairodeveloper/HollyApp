@@ -14,8 +14,7 @@ open class ReviewMovie(var title: String? = null,
                        var publish_date: Date? = null,
                        var url_review: String? = null,
                        var url_pic: String? = null,
-                       var favorite: Boolean = false
-                    ) : RealmObject() {
+                       var article: String? = null) : RealmObject() {
     @PrimaryKey
     var mid: Long = 0
 
