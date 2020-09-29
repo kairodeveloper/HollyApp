@@ -1,4 +1,5 @@
 # HollyApp
+
 Aplicação feita em Kotlin, que busca dados e críticas feitas por críticos do New York Times.
 
 ## Funcionalidades
